@@ -1,0 +1,39 @@
+name: 5310a1
+channels:
+  - conda-forge
+  - defaults
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/
+dependencies:
+  - python>=3.10,<3.12  # 兼容3.10和3.11系列
+  
+  # 基础数据处理库
+  - numpy>=1.21  # 最低1.21，允许后续兼容版本
+  - pandas>=2.0  # 主要版本2.x
+  - scipy>=1.7  # 基础科学计算
+  
+  # 可视化库
+  - matplotlib>=3.5  # 绘图基础
+  - seaborn>=0.13  # 统计可视化
+  
+  # 机器学习库
+  - scikit-learn>=1.0  # 核心机器学习工具
+  
+  # 开发/交互工具
+  - ipython>=8.0  # 交互式环境
+  - jupyter_client>=7.0  # Jupyter支持
+  - pip>=22.0  # 包管理工具
+  
+  # pip安装的包（仅保留显式安装的核心包）
+  - pip:
+      - pandas-flavor>=0.5  # pandas扩展
+      - pingouin>=0.5  # 统计分析
+      - missingno>=0.5  # 缺失值可视化
+      - pyampute>=0.0.3  # 缺失值处理
+      - scikit-learn>=1.0  # 确保与conda版本一致
+      - tensorflow>=2.10  # 深度学习（放宽到2.10+）
+      - keras>=3.0  # 神经网络API
+      - statsmodels>=0.14  # 统计建模
+      - xarray>=2023.0  # 多维数据处理
+
